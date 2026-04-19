@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasmian — Sistema Operacional baseado em Debian com KDE Plasma</title>
+    <meta name="description" content="Plasmian é um sistema operacional moderno baseado em Debian, equipado com o ambiente de desktop KDE Plasma. Desempenho, elegância e liberdade.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">plasmian</a>
+            <div class="nav-links">
+                <a href="#features">Recursos</a>
+                <a href="#about">Sobre</a>
+                <a href="#download" class="nav-cta">Download</a>
+            </div>
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="mobile-nav" class="mobile-nav">
+            <a href="#features">Recursos</a>
+            <a href="#about">Sobre</a>
+            <a href="#download" class="nav-cta">Download</a>
+        </div>
+    </nav>
+
+    <!-- Hero — BreathDearMedusae particle background + centered name -->
+    <header id="hero" class="hero">
+        <div id="medusae-container" class="medusae-container"></div>
+        <div class="hero-center">
+            <h1 class="hero-name">plasmian</h1>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- Tagline Section -->
+    <section id="tagline-section" class="section tagline-section">
+        <div class="tagline-inner">
+            <p class="tagline-label">Sistema Operacional</p>
+            <h2 class="tagline-headline">
+                A elegância do <em>Plasma</em>,<br>
+                a solidez do <em>Debian</em>.
+            </h2>
+            <p class="tagline-description">
+                Plasmian é uma distribuição Linux moderna que une a estabilidade do Debian 
+                à beleza e produtividade do KDE Plasma. Simples de usar, poderoso de verdade.
+            </p>
+            <div class="tagline-actions">
+                <a href="#download" class="btn btn-primary" id="hero-download-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download ISO
+                </a>
+                <a href="#about" class="btn btn-ghost" id="hero-learn-btn">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section features-section">
+        <div class="section-inner">
+            <div class="section-label">Recursos</div>
+            <h2 class="section-title">Tudo que você precisa,<br>nada que você não precisa.</h2>
+
+            <div class="features-grid">
+                <article class="feature-card" id="feature-debian">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Base Debian Estável</h3>
+                    <p>Construído sobre o Debian, garantindo estabilidade, segurança e acesso a milhares de pacotes testados.</p>
+                </article>
+
+                <article class="feature-card" id="feature-kde">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    </div>
+                    <h3>KDE Plasma Desktop</h3>
+                    <p>Interface moderna, personalizável e fluida. O KDE Plasma oferece uma experiência de desktop elegante e produtiva.</p>
+                </article>
+
+                <article class="feature-card" id="feature-performance">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h3>Performance Otimizada</h3>
+                    <p>Configurado para inicialização rápida e uso eficiente de recursos, sem comprometer funcionalidades.</p>
+                </article>
+
+                <article class="feature-card" id="feature-apps">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+                    </div>
+                    <h3>Apps Pré-instalados</h3>
+                    <p>Navegador, suíte de escritório, ferramentas de mídia e utilitários essenciais prontos para uso imediato.</p>
+                </article>
+
+                <article class="feature-card" id="feature-security">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Seguro por Padrão</h3>
+                    <p>Atualizações de segurança do Debian, firewall integrado e políticas de privacidade que respeitam o usuário.</p>
+                </article>
+
+                <article class="feature-card" id="feature-community">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Comunidade Aberta</h3>
+                    <p>Código aberto, colaborativo e com documentação acessível para iniciantes e avançados.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Specs -->
+    <section id="about" class="section about-section">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-label">Sobre</div>
+                    <h2 class="section-title">Feito para quem<br>valoriza <em>simplicidade</em>.</h2>
+                    <p class="about-description">
+                        O Plasmian nasceu da ideia de que um sistema operacional não precisa ser complicado 
+                        para ser poderoso. Com base no Debian e o ambiente KDE Plasma, entregamos uma experiência 
+                        polida, acessível e que funciona desde o primeiro boot.
+                    </p>
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-key">Base</span>
+                            <span class="spec-value">Debian Stable</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-key">Desktop</span>
+                            <span class="spec-value">KDE Plasma 6</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-key">Kernel</span>
+                            <span class="spec-value">Linux 6.x LTS</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-key">Pacotes</span>
+                            <span class="spec-value">APT + Flatpak</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-key">Init</span>
+                            <span class="spec-value">systemd</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-key">Licença</span>
+                            <span class="spec-value">GPL v3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-bar">
+                            <span class="dot dot-close"></span>
+                            <span class="dot dot-minimize"></span>
+                            <span class="dot dot-maximize"></span>
+                            <span class="terminal-title">konsole</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">user@plasmian:~$</span>
+                                <span class="terminal-cmd" id="cmd-1">neofetch</span>
+                            </div>
+                            <pre class="terminal-output" id="neofetch-output">
+       _,met$$$$$gg.          user@plasmian
+    ,g$$$$$$$$$$$$$$$P.       ───────────────
+  ,g$$P"     """Y$$.".        OS: Plasmian 1.0
+ ,$$P'              `$$$.     Kernel: 6.x-lts
+',$$P       ,ggs.     `$$b:   DE: KDE Plasma 6
+`d$$'     ,$P"'   .    $$$    Shell: bash 5.2
+ $$P      d$'     ,    $$P    Terminal: konsole
+ $$:      $$.   -    ,d$$'    Packages: 1847
+ $$;      Y$b._   _,d$P'     Memory: 1.2G / 16G
+ Y$$.    `.`"Y$$$$P"'         ─────────────────
+ `$$b      "-.__              
+  `Y$$                        ████████████████
+   `Y$$.                      
+     `$$b.                    
+       `Y$$b.
+          `"Y$b._   
+              `"""</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section id="download" class="section download-section">
+        <div class="section-inner download-inner">
+            <div class="section-label">Download</div>
+            <h2 class="section-title">Pronto para experimentar?</h2>
+            <p class="download-description">
+                Baixe a ISO do Plasmian e instale em minutos. 
+                Compatível com a maioria dos computadores modernos.
+            </p>
+            <div class="download-cards">
+                <div class="download-card" id="download-stable">
+                    <div class="download-card-badge">Recomendado</div>
+                    <h3>Stable</h3>
+                    <p class="download-version">v1.0.0</p>
+                    <p class="download-size">~2.4 GB · ISO amd64</p>
+                    <a href="#" class="btn btn-primary btn-download" id="download-stable-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download Stable
+                    </a>
+                    <a href="#" class="download-hash">SHA256 checksum</a>
+                </div>
+                <div class="download-card" id="download-testing">
+                    <h3>Testing</h3>
+                    <p class="download-version">v1.1.0-rc1</p>
+                    <p class="download-size">~2.5 GB · ISO amd64</p>
+                    <a href="#" class="btn btn-ghost btn-download" id="download-testing-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download Testing
+                    </a>
+                    <a href="#" class="download-hash">SHA256 checksum</a>
+                </div>
+            </div>
+            <p class="download-footnote">
+                Requisitos mínimos: 2 GB RAM · 20 GB disco · Processador 64-bit
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">plasmian</span>
+                <p>© 2026 Plasmian Project. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Documentação</a>
+                <a href="#">GitHub</a>
+                <a href="#">Comunidade</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
